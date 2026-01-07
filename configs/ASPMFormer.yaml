@@ -1,0 +1,160 @@
+PEMS04:
+  num_nodes: 307
+  in_steps: 12
+  out_steps: 12
+
+  time_of_day: True
+  day_of_week: True
+
+  lr: 0.001
+  weight_decay: 0.0005
+  milestones: [15, 30, 50]
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 300
+
+  model_args:
+    num_nodes: 307
+    in_steps: 12
+    out_steps: 12
+    steps_per_day: 288
+    input_dim: 3
+    output_dim: 1
+    input_embedding_dim: 24
+    tod_embedding_dim: 24
+    dow_embedding_dim: 24
+    spatial_embedding_dim: 0
+    adaptive_embedding_dim: 72
+    feed_forward_dim: 256
+    num_heads: 2
+    num_layers: 4
+    dropout: 0.1
+
+PEMS07:
+  num_nodes: 883
+  in_steps: 12
+  out_steps: 12
+
+  time_of_day: True
+  day_of_week: True
+
+  lr: 0.001
+  weight_decay: 0.001
+  milestones: [15, 35, 50]
+  lr_decay_rate: 0.1
+  batch_size: 8
+  max_epochs: 300
+
+  model_args:
+    num_nodes: 883
+    in_steps: 12
+    out_steps: 12
+    steps_per_day: 288
+    input_dim: 3
+    output_dim: 1
+    input_embedding_dim: 24
+    tod_embedding_dim: 24
+    dow_embedding_dim: 24
+    spatial_embedding_dim: 0
+    adaptive_embedding_dim: 72
+    feed_forward_dim: 256
+    num_heads: 4
+    num_layers: 3
+    dropout: 0.1
+
+PEMS08:
+  num_nodes: 170
+  in_steps: 12
+  out_steps: 12
+
+  time_of_day: True
+  day_of_week: True
+
+  lr: 0.001
+  weight_decay: 0.0015
+  milestones: [25, 45, 65]
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 300
+
+  model_args:
+    num_nodes: 170
+    in_steps: 12
+    out_steps: 12
+    steps_per_day: 288
+    input_dim: 3
+    output_dim: 1
+    input_embedding_dim: 24
+    tod_embedding_dim: 24
+    dow_embedding_dim: 24
+    spatial_embedding_dim: 0
+    adaptive_embedding_dim: 72
+    feed_forward_dim: 256
+    num_heads: 4
+    num_layers: 3
+    dropout: 0.1
+
+SZ:
+  num_nodes: 156
+  in_steps: 12
+  out_steps: 12
+  loss: huber
+  time_of_day: true
+  day_of_week: true
+
+  lr: 0.001
+  weight_decay: 0.0015
+  milestones: [25, 45, 65]
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 300
+
+  model_args:
+    num_nodes: 156
+    in_steps: 12
+    out_steps: 12
+    steps_per_day: 96
+    input_dim: 3
+    output_dim: 1
+    input_embedding_dim: 24
+    tod_embedding_dim: 24
+    dow_embedding_dim: 24
+    spatial_embedding_dim: 0
+    adaptive_embedding_dim: 72
+    feed_forward_dim: 256
+    num_heads: 4
+    num_layers: 3
+    dropout: 0.1
+
+PEMS03:
+  num_nodes: 358
+  in_steps: 12
+  out_steps: 12
+
+  time_of_day: True
+  day_of_week: True
+
+  lr: 0.001
+  weight_decay: 0.0005
+  milestones: [15, 30, 40]
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 300
+
+  model_args:
+    num_nodes: 358
+    in_steps: 12
+    out_steps: 12
+    steps_per_day: 288
+    input_dim: 3
+    output_dim: 1
+    input_embedding_dim: 24
+    tod_embedding_dim: 24
+    dow_embedding_dim: 24
+    spatial_embedding_dim: 0
+    adaptive_embedding_dim: 72
+    feed_forward_dim: 256
+    num_heads: 4
+    num_layers: 3
+    dropout: 0.1
+
