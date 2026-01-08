@@ -96,35 +96,35 @@ PEMS08:
 
 SZ:
   num_nodes: 156
-  in_steps: 12
-  out_steps: 12
-  loss: huber
-  time_of_day: true
-  day_of_week: true
-
+  in_steps: 4
+  out_steps: 4
+  loss: MASK_MAE
+  time_of_day: True
+  day_of_week: True
+  steps_per_day: 96
   lr: 0.001
-  weight_decay: 0.0015
-  milestones: [25, 45, 65]
+  weight_decay: 0.0001
+  milestones: [80, 140, 180]
   lr_decay_rate: 0.1
-  batch_size: 16
-  max_epochs: 300
+  batch_size: 64
+  max_epochs: 200
 
   model_args:
     num_nodes: 156
-    in_steps: 12
-    out_steps: 12
+    in_steps: 4
+    out_steps: 4
     steps_per_day: 96
     input_dim: 3
     output_dim: 1
-    input_embedding_dim: 24
-    tod_embedding_dim: 24
-    dow_embedding_dim: 24
+    input_embedding_dim: 48
+    tod_embedding_dim: 16
+    dow_embedding_dim: 8
     spatial_embedding_dim: 0
     adaptive_embedding_dim: 72
     feed_forward_dim: 256
-    num_heads: 4
+    num_heads: 2
     num_layers: 3
-    dropout: 0.1
+    dropout: 0.15
 
 PEMS03:
   num_nodes: 358
